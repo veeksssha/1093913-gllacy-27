@@ -1,7 +1,7 @@
 # Личный проект «Глейси»
 
 * Студент: [Viktoriia Horobko](https://up.htmlacademy.ru/htmlcss/27/user/1093913).
-* Наставник: `Неизвестно`.
+* Наставник: [Татьяна Симоненко](https://up.htmlacademy.ru/htmlcss/27/user/6613).
 
 ---
 
