@@ -9,13 +9,48 @@
   		<nav>
   			<img src="img/index-logo.svg" width="154" height="64" alt="Логотип магазина Глэйси">
   			<ul>
-  				<li><a href="catalog.html">Каталог</a></li>
+  				<li><a href="#">Каталог</a>
+  					<!-- В поисках ответа на вопрос “а можно ли в <select> размещать ссылки” наткнулась на скрипт и - о Боже! - он работает. Правда, я понятия не имею что все эти слова означают -->
+					<select name="submenu" id="submenu-select" multiple onchange="window.location.href=this.options[this.selectedIndex].value">
+						<option value="#">Новинки</option>
+						<option value="catalog.html">Сливочное</option>
+						<option value="#" selected>Щербеты</option>
+						<option value="#">Фруктовый лед</option>
+						<option value="#">Мелорин</option>
+					</select>
+  				</li>
   				<li><a href="#">Доставка и оплата</a></li>
   				<li><a href="#">О Компании</a></li>
   			</ul>
   			<ul>
-  				<li><button type="button">Поиск</button></li>
-  				<li><button type="button">Вход</button></li>
+  				<li>
+  					<form action="#" method="get">
+  						<label class="visually-hidden" for="website-search-field">Поиск по сайту</label>
+	  					<input type="search" name="website-search" id="website-search-field">
+	  					<button type="button">Поиск</button>
+  					</form>
+  				</li>
+  				<li>
+  					<button type="button">Вход</button>
+  					<section>
+  						<h2 class="visually-hidden">Вход в аккаунт</h2>
+  						<form action="#" method="post">
+  							<p>
+	  							<label class="visually-hidden" for="login-email-field">Электронная почта</label>
+								<input type="email" name="login-email" id="login-email-field" placeholder="Электронная почта" required>
+							</p>
+							<p>
+								<label class="visually-hidden" for="login-password-field">Пароль</label>
+								<input type="password" name="login-password" id="login-password-field" placeholder="Пароль" required>
+							</p>
+							<button type="submit">Войти</button>
+							<ul>
+								<li><a href="#">Забыли пароль?</a></li>
+								<li><a href="#">Новая регистрация</a></li>
+							</ul>
+  						</form>
+  					</section>
+  				</li>
   				<li><button type="button">Корзина</button></li>
   			</ul>
 		</nav>
@@ -26,7 +61,7 @@
     </p>
   	</header>
   	<main>
-      <h1>Магазин Глэйси</h1> <!-- Это будет hidden -->
+      <h1 class="visually-hidden">Магазин Глэйси</h1>
       
       <div>
         <ul>
@@ -86,7 +121,7 @@
       </section>
 
   		<section>
-  			<h2>Преимущества</h2> <!-- Это будет hidden -->
+  			<h2 class="visually-hidden">Преимущества</h2>
   			<p>Магазин Глэйси — это онлайн- и офлайн-магазин по продаже мороженого собственного производства на развес</p>
   			<ul>
   				<li><p>Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.</p></li>
@@ -102,10 +137,13 @@
   		</article>
 
   		<div>
-  			<h2>Подписка на рассылку</h2> <!-- Это будет hidden -->
+  			<h2 class="visually-hidden">Подписка на рассылку</h2>
   			<p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
-  			<!-- Здесь будет поле ввода -->
-  			<button type="button">Отправить</button>
+  			<form action="#" method="post">
+	  			<label class="visually-hidden" for="subscription-email-field">Адрес электронной почты для подписки на рассылку</label>
+	  			<input type="email" name="subscription-email" id="subscription-email-field" placeholder="email@example.com" required>
+	  			<button type="submit">Отправить</button>
+	  		</form>
   		</div>
 
   		<!-- В разработке -->
@@ -136,5 +174,25 @@
         Сделано в <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> © 2019
 	  	</p>
   	</footer>
+
+  	<section>
+  		<h2 class="visually-hidden">Форма обратной связи</h2>
+  		<p>Мы обязательно вам ответим!</p>
+  		<form action="#" method="post">
+  			<p>
+	  			<label class="visually-hidden" for="feedback-name-field">Имя и фамилия</label>
+	  			<input type="text" name="feedback-name" id="feedback-name-field" placeholder="Имя Фамилия">
+	  		</p>
+	  		<p>
+	  			<label class="visually-hidden" for="feedback-email-field">Адрес электронной почты</label>
+				<input type="email" name="feedback-email" id="feedback-email-field" placeholder="email@example.com" required>
+			</p>
+			<p>
+	  			<label class="visually-hidden" for="feedback-text-field">Текст обращения</label>
+	  			<textarea name="feedback-text" id="feedback-text-field" placeholder="В свободной форме" required></textarea>
+  			</p>
+	  		<button type="submit">Отправить</button>
+	  	</form>
+  	</section>
   </body>
 </html>
