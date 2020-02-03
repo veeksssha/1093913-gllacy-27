@@ -63,27 +63,67 @@
   		<section>
   			<h2 class="visually-hidden">Фильтры сливочного мороженого</h2>
 
-  			<div>
-				<h3>Сортировка:</h3>
-				<!-- Здесь будет селект -->
-			</div>
+			<form action="#" method="get">
+	  			<div>
+					<h3>Сортировка:</h3>
+					<select name="sorting" id="sorting-menu">
+						<option selected="">По популярности</option>
+						<option>Сначала недорогие</option>
+						<option>Сначала дорогие</option>
+						<option>По жирности</option>
+					</select>
+				</div>
 
-			<div>
-				<h3>Цена: 100 руб. - 500 руб.</h3>
-				<!-- Здесь будет слайдер -->
-			</div>
+				<div>
+					<h3>Цена: <input type="number" value="100" name="min" id="min"> руб. – <input type="number" value="500" name="max" id="max"> руб.</h3>
+					
+					<div>
+					    <div></div> <!-- min ползунок -->
+					    <div></div> <!-- max ползунок -->
+					</div>
+				</div>
 
-			<div>
-				<h3>Жирность:</h3>
-				<!-- Здесь будут радиобаттоны -->
-			</div>
+				<div>
+					<h3>Жирность:</h3>
+					
+					<div>
+						<input type="radio" name="fat-content" id="0%">
+						<label for="0%">0%</label>
 
-			<div>
-				<h3>Наполнители:</h3>
-				<!-- Здесь будут чекбоксы -->
-			</div>
+						<input type="radio" name="fat-content" id="10%" checked>
+						<label for="10%">До 10%</label>
 
-  			<button type="button">Применить</button>
+						<input type="radio" name="fat-content" id=">30%">
+						<label for=">30%">До 30%</label>
+
+						<input type="radio" name="fat-content" id="<30%">
+						<label for="<30%">Выше 30%</label>
+					</div>
+				</div>
+
+				<div>
+					<h3>Наполнители:</h3>
+					
+					<div>
+						<input type="checkbox" name="chocolate" id="chocolate-checkbox" checked>
+						<label for="chocolate-checkbox">Шоколадные</label>
+
+						<input type="checkbox" name="sugar-topping" id="sugar-topping-checkbox" checked>
+						<label for="sugar-topping-checkbox">Сахарные присыпки</label>
+
+						<input type="checkbox" name="fruits" id="fruits-checkbox">
+						<label for="fruits-checkbox">Фрукты</label>
+
+						<input type="checkbox" name="syrup" id="syrup-checkbox">
+						<label for="syrup-checkbox">Сиропы</label>
+
+						<input type="checkbox" name="jam" id="jam-checkbox">
+						<label for="jam-checkbox">Джемы</label>
+					</div>
+				</div>
+
+	  			<button type="button">Применить</button>
+  			</form>
   		</section>
 
 		<section>

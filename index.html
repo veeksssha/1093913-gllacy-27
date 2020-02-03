@@ -62,25 +62,40 @@
   	</header>
   	<main>
       <h1 class="visually-hidden">Магазин Глэйси</h1>
-      
-      <div>
-        <ul>
-          <li>
-            <h2>Крем-брюле и пломбир с малиновым джемом</h2>
-            <button type="button">Давайте оба!</button>
-          </li>
+      <div> <!-- Общая обертка слайдера -->
+        
+        <div> <!-- Radio для реализации слайдера, будут hidden -->
+          <input type="radio" name="slider" id="slide-1" checked>
+          <input type="radio" name="slider" id="slide-2">
+          <input type="radio" name="slider" id="slide-3">
+        </div>
 
-          <li>
-            <h2>Шоколадный пломбир и лимонный сорбет</h2>
-            <button type="button">Давайте оба!</button>
-          </li>
 
-          <li>
-            <h2>Пломбир с помадкой и клубничный щербет</h2>
-            <button type="button">Давайте оба!</button>
-          </li>
+        <div> <!-- Содержание слайдов -->
+          <ul>
+            <li>
+              <h2>Крем-брюле и пломбир с малиновым джемом</h2>
+              <button type="button">Давайте оба!</button>
+            </li>
 
-        </ul>
+            <li>
+              <h2>Шоколадный пломбир и лимонный сорбет</h2>
+              <button type="button">Давайте оба!</button>
+            </li>
+
+            <li>
+              <h2>Пломбир с помадкой и клубничный щербет</h2>
+              <button type="button">Давайте оба!</button>
+            </li>
+          </ul>
+        </div>
+        
+        <div> <!-- Label для навигации по слайдам -->
+          <label for="slide-1"></label>
+          <label for="slide-2"></label>
+          <label for="slide-3"></label>
+        </div>
+
       </div>
 
       <div>
@@ -146,7 +161,23 @@
 	  		</form>
   		</div>
 
-  		<!-- В разработке -->
+      <div>
+        <img src="img/map.jpg" width="1200" height="430" alt="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург">
+
+        <section>
+          <h2 class="visually-hidden">Контактная информация</h2>
+          <h3>Адрес главного офиса и офлайн-магазина:</h3>
+          <p>ул. Большая Конюшенная 19/8, Санкт-Петербург</p>
+
+          <h3>Для заказов по телефону:</h3>
+          <p>
+            8 812 450-25-25
+            (с 10 до 20 ежедневно)
+          </p>
+
+          <button type="button">Форма обратной связи</button>
+        </section>
+      </div>
   	</main>
   	<footer>
   		<div>
