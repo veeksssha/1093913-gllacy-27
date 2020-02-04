@@ -3,53 +3,90 @@
   <head>
     <meta charset="utf-8">
     <title>Сливочное мороженое</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap" rel="stylesheet">
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
   	<header>
-  		<nav>
+  		<nav class="main-navigation">
 			<a href="index.html">
 				<img src="img/index-logo.svg" width="154" height="64" alt="Логотип магазина Глэйси">
 			</a>
-			<ul>
-				<li><a href="catalog.html">Каталог</a></li>
+			<ul class="site-navigation">
+				<li class="current-page"><a href="#">Каталог</a>
+					<select name="submenu" id="submenu-select" multiple onchange="window.location.href=this.options[this.selectedIndex].value">
+						<option class="latest-products" value="#">Новинки</option>
+						<option value="catalog.html">Сливочное</option>
+						<option value="#" selected>Щербеты</option>
+						<option value="#">Фруктовый лед</option>
+						<option value="#">Мелорин</option>
+					</select>
+  				</li>
 				<li><a href="#">Доставка и оплата</a></li>
 				<li><a href="#">О Компании</a></li>
 			</ul>
-			<ul>
-				<li><button type="button">Поиск</button></li>
-				<li><button type="button">Вход</button></li>
+			<ul class="user-navigation">
 				<li>
-					<button type="button">Корзина</button>
-					<section>
+  					<form action="#" method="get">
+              			<div class="search">
+    						<label class="visually-hidden" for="website-search-field">Поиск по сайту</label>
+  	  						<input class="search-field" type="search" name="website-search" id="website-search-field">
+              			</div>
+	  					<button class="nav-button" type="button">Поиск</button>
+  					</form>
+  				</li>
+				<li>
+  					<button class="nav-button" type="button">Вход</button>
+  					<section class="login">
+  						<h2 class="visually-hidden">Вход в аккаунт</h2>
+  						<form action="#" method="post">
+  							<p>
+	  							<label class="visually-hidden" for="login-email-field">Электронная почта</label>
+								<input class="email-field" type="email" name="login-email" id="login-email-field" placeholder="Электронная почта" required>
+							</p>
+							<p>
+								<label class="visually-hidden" for="login-password-field">Пароль</label>
+								<input class="password-field" type="password" name="login-password" id="login-password-field" placeholder="Пароль" required>
+							</p>
+							<button class="button" type="submit">Войти</button>
+							<ul class="login-links">
+								<li><a href="#">Забыли пароль?</a></li>
+								<li><a href="#">Новая регистрация</a></li>
+							</ul>
+  						</form>
+  					</section>
+  				</li>
+				<li>
+					<button class="nav-button" type="button">Корзина</button>
+					<section class="cart">
 						<h2 class="visually-hidden">Товары корзины</h2>
 
-						<div>
+						<div class="cart-item">
 							<button type="button">Удалить</button>
 							<img src="img/item-1.jpg" width="33" height="33" alt="Сливочное мороженое с апельсиновым джемом и цитрусовой стружкой">
 							<p>Пломбир с апельсиновым джемом</p>
-							<p>1,5 кг х 200 руб.</p>
+							<p>1,5 кг х <span>200 руб.</span></p>
 							<p>300 руб.</p>
 						</div>
 
-						<div>
+						<div class="cart-item">
 							<button type="button">Удалить</button>
 							<img src="img/item-3.jpg" width="33" height="33" alt="Сливочно-клубничное мороженое с присыпкой из белого шоколада">
 							<p>Клубничный пломбир с присыпкой из белого шоколада</p>
-							<p>1,5 кг х 300 руб.</p>
+							<p>1,5 кг х <span>300 руб.</span></p>
 							<p>450 руб.
 						</div>
 
-						<p>Итого: 750 руб.</p>
-						<button type="button">Оформить</button>
+						<p class="sum">Итого: 750 руб.</p>
+						<button class="button" type="button">Оформить</button>
 					</section>
 				</li>
 			</ul>
 		</nav>
 
-		<p>
-  			С 10 до 20, ежедневно<br>
-  			8 812 450-25-25
-  		</p>
+		<p class="timetable">С 10 до 20, ежедневно</p>
+    	<p class="phone-number">8 812 450-25-25</p>
   	</header>
   	<main>
   		<h1>Сливочное мороженое</h1>

@@ -1,0 +1,253 @@
+body {
+  margin: 0;
+  padding: 0;
+
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 500;
+  color: #ffffff;
+
+  background-color: #849d8f;
+  background-image: url("../img/index-background-1.png");
+  background-position: top center;
+  background-repeat: no-repeat;
+}
+
+/*
+Нам пока не объясняли как правильно задавать .visually-hidden, но уж очень мне хотелось побыстрее убрать эти элементы для удобства. 
+Взяла правило с a11yproject.com, по необходимости заменю.
+  */
+.visually-hidden { 
+    position: absolute !important;
+    height: 1px; 
+    width: 1px;
+    overflow: hidden;
+    clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+    clip: rect(1px, 1px, 1px, 1px);
+    white-space: nowrap; /* added line */
+}
+
+a {
+  text-decoration: none;
+}
+
+.button {
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 700;
+
+  border: none;
+  background-color: #ec593c;
+  /*
+  linear-gradient
+  box-shadow
+  */
+
+  color: #fefefe;
+}
+
+.main-navigation {
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.site-navigation,
+.user-navigation {
+  list-style: none;
+}
+
+.site-navigation a {
+  border-bottom: 1px solid rgb(255, 255, 255, 0.2);
+  color: #ffffff;
+}
+
+.site-navigation a:hover {
+  background-color: #f7f6f3;
+  color: #323232;
+}
+
+.site-navigation a:active {
+  background-color: #ededed;
+  color: #323232;
+}
+
+/*
+Возможно, придется менять верстку
+.submenu {
+
+}
+
+.submenu option {
+	
+}
+*/
+
+
+.nav-button {
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 500;
+
+  border: none;
+  background-color: rgb(255, 255, 255, 0.2);
+  color: #ffffff;
+}
+
+.nav-button:hover {
+  background-color: #f8f7f4;
+  color: #323232;
+}
+
+.search,
+.login,
+.cart {
+  background-color: #f8f7f4;
+  /*
+  box-shadow
+  */
+}
+
+.search-field,
+.email-field,
+.password-field,
+.search-field::placeholder,
+.email-field::placeholder,
+.password-field::placeholder {
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 400;
+
+  color: #999999;
+}
+
+.login-links a {
+  font-size: 13px;
+  line-height: 24px;
+  font-weight: 400;
+
+  border-bottom: 1px solid rgb(0, 0, 0, 0.3);
+
+  color: #323232;
+}
+
+.cart-item {
+  font-size: 13px;
+  line-height: 16px;
+  font-weight: 400;
+
+  color: #323232;
+}
+
+.cart-item span {
+  color: #999999;
+}
+
+.sum {
+  font-size: 15px;
+  line-height: 18px;
+  font-weight: 700;
+
+  color: #323232;
+}
+
+.timetable {
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 700;
+}
+
+.phone-number {
+  font-size: 22px;
+  line-height: 24px;
+  font-weight: 700;
+}
+
+.current-page a {
+  border-bottom: none;
+  background-color: #d07058;
+  /*
+  Нужно будет еще поработать над тенью
+  box-shadow: inset 0px 2px 1px 0px rgba(105, 105, 105, 0.004);
+  */
+  color: #ffffff;
+}
+
+.features {
+  background-color: #eee2cd;
+  background-image: url("../img/features-background.jpg");
+  background-position: 0 0;
+  background-repeat: repeat;
+
+  color: #323232;
+}
+
+.features-title {
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 500;
+}
+
+.features-list {
+  list-style: none;
+}
+
+.feature-item p {
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 400;
+}
+
+.article {
+  background-color: #ffffff;
+  background-image: url("../img/article-background.jpg");
+  background-position: 0 0;
+  background-repeat: no-repeat;
+
+  color: #323232;
+}
+
+.article h2 {
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 500;
+}
+
+.article h3 {
+  text-decoration: underline;
+
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 700;
+}
+
+.subscription {
+  background-color: #f8f7f4;
+
+  color: #5a5a5a;
+}
+
+/* Пока не знаю насколько правильно
+.subscription::after {
+  background-image: url("../img/subscription-background.svg");
+  background-position: 0 0;
+  background-repeat: no-repeat;
+}
+*/
+
+.subscription p {
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 400;
+}
+
+.subscription-field {
+  border: 1px solid #b2b2b2;
+  line-height: 24px;
+}
+
+.subscription-field {
+  line-height: 24px;
+}
