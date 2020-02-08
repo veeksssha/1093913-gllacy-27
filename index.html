@@ -64,9 +64,9 @@
   	</header>
   	<main>
       <h1 class="visually-hidden">Магазин Глэйси</h1>
-      <div> <!-- Общая обертка слайдера -->
+      <div class="slider"> <!-- Общая обертка слайдера -->
         
-        <div> <!-- Radio для реализации слайдера, будут hidden -->
+        <div class="visually-hidden"> <!-- Radio для реализации слайдера, будут hidden -->
           <input type="radio" name="slider" id="slide-1" checked>
           <input type="radio" name="slider" id="slide-2">
           <input type="radio" name="slider" id="slide-3">
@@ -75,19 +75,19 @@
 
         <div> <!-- Содержание слайдов -->
           <ul>
-            <li>
+            <li class="slide-1">
               <h2>Крем-брюле и пломбир с малиновым джемом</h2>
-              <button type="button">Давайте оба!</button>
+              <button class="button big-button" type="button">Давайте оба!</button>
             </li>
 
-            <li>
+            <li class="slide-2 visually-hidden">
               <h2>Шоколадный пломбир и лимонный сорбет</h2>
-              <button type="button">Давайте оба!</button>
+              <button class="button big-button" type="button">Давайте оба!</button>
             </li>
 
-            <li>
+            <li class="slide-3 visually-hidden">
               <h2>Пломбир с помадкой и клубничный щербет</h2>
-              <button type="button">Давайте оба!</button>
+              <button class="button big-button" type="button">Давайте оба!</button>
             </li>
           </ul>
         </div>
@@ -100,39 +100,43 @@
 
       </div>
 
-      <div>
+      <div class="raspberry-block">
         <h2>Малинка даром!</h2>
         <p>При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.</p>
-        <button type="button">Хочу варенье!</button>
+        <button class="button" type="button">Хочу варенье!</button>
       </div>
 
-      <div>
+      <div class="chocolate-block">
         <h2>Шоколадки даром!</h2>
         <p>При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.</p>
-        <button type="button">Хочу шоколадки!</button>
+        <button class="button" type="button">Хочу шоколадки!</button>
       </div>
 
-  		<section>
+  		<section class="hit-items">
         <ul>
-          <li>
+          <li class="hit-item">
             <img src="img/item-1.jpg" width="267" height="267" alt="Сливочное мороженое с апельсиновым джемом и цитрусовой стружкой">
             <a href="#"><h3>Сливочное с апельсиновым джемом и цитрусовой стружкой</h3></a>
-            <p>310 ₽/кг</p>
+            <p>310 ₽<span>/кг</span></p>
+            <button class="button" type="button">Быстрый просмотр</button> <!-- Будет отображаться при наведении -->
           </li>
-          <li>
+          <li class="hit-item">
             <img src="img/item-2.jpg" width="267" height="267" alt="Сливочно-кофейное мороженое с кусочками шоколада">
             <a href="#"><h3>Сливочно-кофейное с кусочками шоколада</h3></a>
-            <p>380 ₽/кг</p>
+            <p>380 ₽<span>/кг</span></p>
+            <button class="button" type="button">Быстрый просмотр</button> <!-- Будет отображаться при наведении -->
           </li>
-          <li>
+          <li class="hit-item">
             <img src="img/item-3.jpg" width="267" height="267" alt="Сливочно-клубничное мороженое с присыпкой из белого шоколада">
             <a href="#"><h3>Сливочно-клубничное с присыпкой из белого шоколада</h3></a>
-            <p>355 ₽/кг</p>
+            <p>355 ₽<span>/кг</span></p>
+            <button class="button" type="button">Быстрый просмотр</button> <!-- Будет отображаться при наведении -->
           </li>
-          <li>
+          <li class="hit-item">
             <img src="img/item-4.jpg" width="267" height="267" alt="Сливочное крем-брюле с карамельной подливкой">
             <a href="#"><h3>Сливочное крем-брюле с карамельной подливкой</h3></a>
-            <p>415 ₽/кг</p>
+            <p>415 ₽<span>/кг</span></p>
+            <button class="button" type="button">Быстрый просмотр</button> <!-- Будет отображаться при наведении -->
           </li>
         </ul>  
       </section>
@@ -168,18 +172,16 @@
       <div>
         <img src="img/map.jpg" width="1200" height="430" alt="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург">
 
-        <section>
+        <section class="contacts">
           <h2 class="visually-hidden">Контактная информация</h2>
           <h3>Адрес главного офиса и офлайн-магазина:</h3>
           <p>ул. Большая Конюшенная 19/8, Санкт-Петербург</p>
 
           <h3>Для заказов по телефону:</h3>
-          <p>
-            8 812 450-25-25
-            (с 10 до 20 ежедневно)
-          </p>
+          <p>8 812 450-25-25</p>
+          <span>(с 10 до 20 ежедневно)</span>
 
-          <button type="button">Форма обратной связи</button>
+          <button class="button" type="button">Форма обратной связи</button>
         </section>
       </div>
   	</main>
@@ -212,9 +214,9 @@
 	  	</p>
   	</footer>
 
-  	<section class="feedback">
+  	<section class="feedback visually-hidden">
   		<h2 class="visually-hidden">Форма обратной связи</h2>
-  		<p feedback-title>Мы обязательно вам ответим!</p>
+  		<p class="feedback-title">Мы обязательно вам ответим!</p>
   		<form action="#" method="post">
   			<p>
 	  			<label class="visually-hidden" for="feedback-name-field">Имя и фамилия</label>
@@ -228,7 +230,7 @@
 	  			<label class="visually-hidden" for="feedback-text-field">Текст обращения</label>
 	  			<textarea name="feedback-text" id="feedback-text-field" placeholder="В свободной форме" required></textarea>
   			</p>
-	  		<button type="submit">Отправить</button>
+	  		<button class="button" type="submit">Отправить</button>
 	  	</form>
   	</section>
   </body>

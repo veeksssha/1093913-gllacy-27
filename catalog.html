@@ -99,33 +99,33 @@
   			<li>Сливочное</li>
   		</ul>
 
-  		<section>
+  		<section class="filters">
   			<h2 class="visually-hidden">Фильтры сливочного мороженого</h2>
 
 			<form action="#" method="get">
-	  			<div>
-					<h3>Сортировка:</h3>
+	  			<fieldset class="filter filter-sorting">
+					<legend>Сортировка:</legend>
 					<select name="sorting" id="sorting-menu">
 						<option selected="">По популярности</option>
 						<option>Сначала недорогие</option>
 						<option>Сначала дорогие</option>
 						<option>По жирности</option>
 					</select>
-				</div>
+				</fieldset>
 
-				<div>
-					<h3>Цена: <input type="number" value="100" name="min" id="min"> руб. – <input type="number" value="500" name="max" id="max"> руб.</h3>
+				<fieldset class="filter filter-price">
+					<legend>Цена: <input type="number" value="100" name="min" id="min"> руб. – <input type="number" value="500" name="max" id="max"> руб.</legend>
 					
-					<div>
+					<div class="price-controls">
 					    <div></div> <!-- min ползунок -->
 					    <div></div> <!-- max ползунок -->
 					</div>
-				</div>
+				</fieldset>
 
-				<div>
-					<h3>Жирность:</h3>
+				<fieldset class="filter filter-fat">
+					<legend>Жирность:</legend>
 					
-					<div>
+					<div class="fat-controls">
 						<input type="radio" name="fat-content" id="0%">
 						<label for="0%">0%</label>
 
@@ -138,12 +138,12 @@
 						<input type="radio" name="fat-content" id="<30%">
 						<label for="<30%">Выше 30%</label>
 					</div>
-				</div>
+				</fieldset>
 
-				<div>
-					<h3>Наполнители:</h3>
+				<fieldset class="filter filter-filling">
+					<legend>Наполнители:</legend>
 					
-					<div>
+					<div class="filling-controls">
 						<input type="checkbox" name="chocolate" id="chocolate-checkbox" checked>
 						<label for="chocolate-checkbox">Шоколадные</label>
 
@@ -159,9 +159,9 @@
 						<input type="checkbox" name="jam" id="jam-checkbox">
 						<label for="jam-checkbox">Джемы</label>
 					</div>
-				</div>
+				</fieldset>
 
-	  			<button type="button">Применить</button>
+	  			<button class="filter-button" type="button">Применить</button>
   			</form>
   		</section>
 
@@ -243,13 +243,13 @@
 			</ul>
 		</section>
 
-		<ol>
-			<li><a>1</a></li>
+		<ol class="catalog-pages">
+			<li class="catalog-current-page"><a>1</a></li>
 			<li><a href="#">2</a></li>
 			<li><a href="#">3</a></li>
 			<li><a href="#">4</a></li>
 			<li><a href="#">5</a></li>
-			<li><button type="button">></button></li>
+			<li><button class="visually-hidden" type="button">></button></li>
 		</ol>
   	</main>
   	<footer>
