@@ -10,12 +10,12 @@
   <body>
   	<header>
   		<nav class="main-navigation">
-			<a href="index.html">
-				<img src="img/index-logo.svg" width="154" height="64" alt="Логотип магазина Глэйси">
+			<a class="index-logo-link" href="index.html">
+				<img class="index-logo" src="img/index-logo.svg" width="154" height="64" alt="Логотип магазина Глэйси">
 			</a>
 			<ul class="site-navigation">
 				<li class="current-page"><a href="#">Каталог</a>
-					<select name="submenu" id="submenu-select" multiple onchange="window.location.href=this.options[this.selectedIndex].value">
+					<select class="submenu visually-hidden" name="submenu" id="submenu-select" multiple onchange="window.location.href=this.options[this.selectedIndex].value">
 						<option class="latest-products" value="#">Новинки</option>
 						<option value="catalog.html">Сливочное</option>
 						<option value="#" selected>Щербеты</option>
@@ -31,13 +31,13 @@
   					<form action="#" method="get">
               			<div class="search">
     						<label class="visually-hidden" for="website-search-field">Поиск по сайту</label>
-  	  						<input class="search-field" type="search" name="website-search" id="website-search-field">
+  	  						<input class="search-field" type="search" name="website-search" id="website-search-field" placeholder="Крем-брюле">
               			</div>
-	  					<button class="nav-button" type="button">Поиск</button>
+	  					<button class="nav-button nav-button-search" type="button">Поиск</button>
   					</form>
   				</li>
 				<li>
-  					<button class="nav-button" type="button">Вход</button>
+  					<button class="nav-button nav-button-login" type="button">Вход</button>
   					<section class="login">
   						<h2 class="visually-hidden">Вход в аккаунт</h2>
   						<form action="#" method="post">
@@ -58,12 +58,12 @@
   					</section>
   				</li>
 				<li>
-					<button class="nav-button" type="button">Корзина</button>
+					<button class="nav-button full-cart" type="button">2 товара</button>
 					<section class="cart">
 						<h2 class="visually-hidden">Товары корзины</h2>
 
 						<div class="cart-item">
-							<button type="button">Удалить</button>
+							<button class="visually-hidden" type="button">Удалить</button>
 							<img src="img/item-1.jpg" width="33" height="33" alt="Сливочное мороженое с апельсиновым джемом и цитрусовой стружкой">
 							<p>Пломбир с апельсиновым джемом</p>
 							<p>1,5 кг х <span>200 руб.</span></p>
@@ -71,7 +71,7 @@
 						</div>
 
 						<div class="cart-item">
-							<button type="button">Удалить</button>
+							<button class="visually-hidden" type="button">Удалить</button>
 							<img src="img/item-3.jpg" width="33" height="33" alt="Сливочно-клубничное мороженое с присыпкой из белого шоколада">
 							<p>Клубничный пломбир с присыпкой из белого шоколада</p>
 							<p>1,5 кг х <span>300 руб.</span></p>
@@ -84,16 +84,18 @@
 				</li>
 			</ul>
 		</nav>
-
-		<p class="timetable">С 10 до 20, ежедневно</p>
-    	<p class="phone-number">8 812 450-25-25</p>
+		
+		<div class="contacts"></div>
+			<p class="timetable">С 10 до 20, ежедневно</p>
+	    	<p class="phone-number">8 812 450-25-25</p>
+	    </p>
   	</header>
   	<main>
   		<h1>Сливочное мороженое</h1>
 
-  		<ul>
-  			<li><a href="index.html">Главная</a></li>
-  			<li><a href="catalog.html">Каталог</a></li>
+  		<ul class="catalog-navigation">
+  			<li><a href="index.html">Главная</a><span>&raquo;</span></li>
+  			<li><a href="catalog.html">Каталог</a><span>&raquo;</span></li>
   			<li>Сливочное</li>
   		</ul>
 
@@ -166,77 +168,77 @@
 		<section>
 			<h2 class="visually-hidden">Список сливочного мороженого</h2>
 			<ul>
-				<li>
+				<li class="catalog-item">
 					<img src="img/item-1.jpg" width="267" height="267" alt="Сливочное мороженое с апельсиновым джемом и цитрусовой стружкой">
 					<a href="#"><h3>Сливочное с апельсиновым джемом и цитрусовой стружкой</h3></a>
-					<p>310 ₽/кг</p>
-					<button type="button">Быстрый просмотр</button> <!-- Будет отображаться при наведении -->
+					<p>310 ₽<span>/кг</span></p>
+					<button class="button" type="button">Быстрый просмотр</button> <!-- Будет отображаться при наведении -->
 				</li>
-				<li>
+				<li class="catalog-item">
 					<img src="img/item-2.jpg" width="267" height="267" alt="Сливочно-кофейное мороженое с кусочками шоколада">
 					<a href="#"><h3>Сливочно-кофейное с кусочками шоколада</h3></a>
-					<p>380 ₽/кг</p>
-					<button type="button">Быстрый просмотр</button> <!-- Будет отображаться при наведении -->
+					<p>380 ₽<span>/кг</span></p>
+					<button class="button" type="button">Быстрый просмотр</button> <!-- Будет отображаться при наведении -->
 				</li>
-				<li>
+				<li class="catalog-item">
 					<img src="img/item-3.jpg" width="267" height="267" alt="Сливочно-клубничное мороженое с присыпкой из белого шоколада">
 					<a href="#"><h3>Сливочно-клубничное с присыпкой из белого шоколада</h3></a>
-					<p>355 ₽/кг</p>
-					<button type="button">Быстрый просмотр</button> <!-- Будет отображаться при наведении -->
+					<p>355 ₽<span>/кг</span></p>
+					<button class="button" type="button">Быстрый просмотр</button> <!-- Будет отображаться при наведении -->
 				</li>
-				<li>
+				<li class="catalog-item">
 					<img src="img/item-4.jpg" width="267" height="267" alt="Сливочное крем-брюле с карамельной подливкой">
 					<a href="#"><h3>Сливочное крем-брюле с карамельной подливкой</h3></a>
-					<p>415 ₽/кг</p>
-					<button type="button">Быстрый просмотр</button> <!-- Будет отображаться при наведении -->
+					<p>415 ₽<span>/кг</span></p>
+					<button class="button" type="button">Быстрый просмотр</button> <!-- Будет отображаться при наведении -->
 				</li>
-				<li>
+				<li class="catalog-item">
 					<img src="img/item-5.jpg" width="267" height="267" alt="Сливочное мороженое с брусничным джемом">
 					<a href="#"><h3>Сливочное с брусничным джемом</h3></a>
-					<p>325 ₽/кг</p>
-					<button type="button">Быстрый просмотр</button> <!-- Будет отображаться при наведении -->
+					<p>325 ₽<span>/кг</span></p>
+					<button class="button" type="button">Быстрый просмотр</button> <!-- Будет отображаться при наведении -->
 				</li>
-				<li>
+				<li class="catalog-item">
 					<img src="img/item-6.jpg" width="267" height="267" alt="Сливочно-черничное мороженое с цельными ягодами черники">
 					<a href="#"><h3>Сливочно-черничное мороженое с цельными ягодами черники</h3></a>
-					<p>410 ₽/кг</p>
-					<button type="button">Быстрый просмотр</button> <!-- Будет отображаться при наведении -->
+					<p>410 ₽<span>/кг</span></p>
+					<button class="button" type="button">Быстрый просмотр</button> <!-- Будет отображаться при наведении -->
 				</li>
-				<li>
+				<li class="catalog-item">
 					<img src="img/item-7.jpg" width="267" height="267" alt="Сливочно-лимонное мороженое с карамельной присыпкой">
 					<a href="#"><h3>Сливочно-лимонное с карамельной присыпкой</h3></a>
-					<p>375 ₽/кг</p>
-					<button type="button">Быстрый просмотр</button> <!-- Будет отображаться при наведении -->
+					<p>375 ₽<span>/кг</span></p>
+					<button class="button" type="button">Быстрый просмотр</button> <!-- Будет отображаться при наведении -->
 				</li>
-				<li>
+				<li class="catalog-item">
 					<img src="img/item-8.jpg" width="267" height="267" alt="Сливочное мороженое с шоколадной стружкой">
 					<a href="#"><h3>Сливочное с шоколадной стружкой</h3></a>
-					<p>320 ₽/кг</p>
-					<button type="button">Быстрый просмотр</button> <!-- Будет отображаться при наведении -->
+					<p>320 ₽<span>/кг</span></p>
+					<button class="button" type="button">Быстрый просмотр</button> <!-- Будет отображаться при наведении -->
 				</li>
-				<li>
+				<li class="catalog-item">
 					<img src="img/item-9.jpg" width="267" height="267" alt="Сливочно-ванильное мороженое с кусочками шоколада">
 					<a href="#"><h3>Сливочно-ванильное с кусочками шоколада</h3></a>
-					<p>440 ₽/кг</p>
-					<button type="button">Быстрый просмотр</button> <!-- Будет отображаться при наведении -->
+					<p>440 ₽<span>/кг</span></p>
+					<button class="button" type="button">Быстрый просмотр</button> <!-- Будет отображаться при наведении -->
 				</li>
-				<li>
+				<li class="catalog-item">
 					<img src="img/item-10.jpg" width="267" height="267" alt="Сливочноe мороженое с ментоловым сиропом">
 					<a href="#"><h3>Сливочноe с ментоловым сиропом</h3></a>
-					<p>435 ₽/кг</p>
-					<button type="button">Быстрый просмотр</button> <!-- Будет отображаться при наведении -->
+					<p>435 ₽<span>/кг</span></p>
+					<button class="button" type="button">Быстрый просмотр</button> <!-- Будет отображаться при наведении -->
 				</li>
-				<li>
+				<li class="catalog-item">
 					<img src="img/item-11.jpg" width="267" height="267" alt="Сливочное мороженое с кусочками черного шоколада">
 					<a href="#"><h3>Сливочное с кусочками черного шоколада</h3></a>
-					<p>355 ₽/кг</p>
-					<button type="button">Быстрый просмотр</button> <!-- Будет отображаться при наведении -->
+					<p>355 ₽<span>/кг</span></p>
+					<button class="button" type="button">Быстрый просмотр</button> <!-- Будет отображаться при наведении -->
 				</li>
-				<li>
+				<li class="catalog-item">
 					<img src="img/item-12.jpg" width="267" height="267" alt="Сливочное мороженое с мятным сиропом">
 					<a href="#"><h3>Сливочное с мятным сиропом</h3></a>
-					<p>420 ₽/кг</p>
-					<button type="button">Быстрый просмотр</button> <!-- Будет отображаться при наведении -->
+					<p>420 ₽<span>/кг</span></p>
+					<button class="button" type="button">Быстрый просмотр</button> <!-- Будет отображаться при наведении -->
 				</li>
 			</ul>
 		</section>
@@ -252,28 +254,30 @@
   	</main>
   	<footer>
   		<div>
-  			<ul>
-  				<li><a href="#">Твиттер</a></li>
-				<li><a href="#">Инстаграм</a></li>
-				<li><a href="#">Фейсбук</a></li>
-				<li><a href="#">Вконтакте</a></li>
+  			<ul class="footer-social">
+  				<li class="social-button social-button-twitter"><a href="#">Твиттер</a></li>
+  				<li class="social-button social-button-instagram"><a href="#">Инстаграм</a></li>
+  				<li class="social-button social-button-facebook"><a href="#">Фейсбук</a></li>
+  				<li class="social-button social-button-vk"><a href="#">Вконтакте</a></li>
   			</ul>
   		</div>
 		
 		<div>
-	  		<ul>
-	  			<li><a href="#">Для поставщиков</a></li>
+	  		<ul class="footer-links">
+	  			<li class="first-link"><a href="#">Для поставщиков</a></li>
 	  			<li><a href="#">О производстве</a></li>
 	  			<li><a href="#">Наши документы</a></li>
 	  			<li><a href="#">Экологические стандарты</a></li>
 	  		</ul>
 	  	</div>
 
-	  	<p>
+	  	<p class="copyright">
 	  		<a href="https://htmlacademy.ru/intensive/htmlcss">
-	  			<img src="img/html-academy.svg" width="108" height="39" alt="Логотип HTML Академии">
-	  		</a>
-	  		Сделано в <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> © 2019
+            	<img src="img/html-academy.svg" width="108" height="39" alt="Логотип HTML Академии">
+            </a>
+        	<p class="copyright-text">
+          		Сделано в <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> © 2019
+        	</p>
 	  	</p>
   	</footer>
   </body>

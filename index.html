@@ -10,10 +10,10 @@
   <body>
   	<header>
   		<nav class="main-navigation">
-  			<img src="img/index-logo.svg" width="154" height="64" alt="Логотип магазина Глэйси">
+  			<img class="index-logo" src="img/index-logo.svg" width="154" height="64" alt="Логотип магазина Глэйси">
   			<ul class="site-navigation">
   				<li><a href="#">Каталог</a>
-					<select class="submenu" name="submenu" id="submenu-select" multiple onchange="window.location.href=this.options[this.selectedIndex].value">
+					<select class="submenu visually-hidden" name="submenu" id="submenu-select" multiple onchange="window.location.href=this.options[this.selectedIndex].value">
 						<option value="#">Новинки</option>
 						<option value="catalog.html">Сливочное</option>
 						<option value="#" selected>Щербеты</option>
@@ -29,13 +29,13 @@
   					<form action="#" method="get">
               <div class="search">
     						<label class="visually-hidden" for="website-search-field">Поиск по сайту</label>
-  	  					<input class="search-field" type="search" name="website-search" id="website-search-field">
+  	  					<input class="search-field" type="search" name="website-search" id="website-search-field" placeholder="Крем-брюле">
               </div>
-	  					<button class="nav-button" type="button">Поиск</button>
+	  					<button class="nav-button nav-button-search" type="button">Поиск</button>
   					</form>
   				</li>
   				<li>
-  					<button class="nav-button" type="button">Вход</button>
+  					<button class="nav-button nav-button-login" type="button">Вход</button>
   					<section class="login">
   						<h2 class="visually-hidden">Вход в аккаунт</h2>
   						<form action="#" method="post">
@@ -55,7 +55,7 @@
   						</form>
   					</section>
   				</li>
-  				<li><button class="nav-button" type="button">Корзина</button></li>
+  				<li><button class="nav-button" type="button">Пусто</button></li>
   			</ul>
 		</nav>
 
@@ -153,15 +153,17 @@
   			<h3>10 способов сервировки фруктовых щербетов к столу</h3>
   		</article>
 
-  		<div class="subscription">
-  			<h2 class="visually-hidden">Подписка на рассылку</h2>
-  			<p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
-  			<form action="#" method="post">
-	  			<label class="visually-hidden" for="subscription-email-field">Адрес электронной почты для подписки на рассылку</label>
-	  			<input class="subscription-field" type="email" name="subscription-email" id="subscription-email-field" placeholder="email@example.com" required>
-	  			<button class="button" type="submit">Отправить</button>
-	  		</form>
-  		</div>
+  		<div class="subscription-wrapper">
+        <div class="subscription">
+    			<h2 class="visually-hidden">Подписка на рассылку</h2>
+    			<p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
+    			<form action="#" method="post">
+  	  			<label class="visually-hidden" for="subscription-email-field">Адрес электронной почты для подписки на рассылку</label>
+  	  			<input class="subscription-field" type="email" name="subscription-email" id="subscription-email-field" placeholder="email@example.com" required>
+  	  			<button class="button" type="submit">Отправить</button>
+  	  		</form>
+    		</div>
+      </div>
 
       <div>
         <img src="img/map.jpg" width="1200" height="430" alt="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург">
@@ -183,42 +185,44 @@
   	</main>
   	<footer>
   		<div>
-  			<ul>
-  				<li><a href="#">Твиттер</a></li>
-				<li><a href="#">Инстаграм</a></li>
-				<li><a href="#">Фейсбук</a></li>
-				<li><a href="#">Вконтакте</a></li>
+  			<ul class="footer-social">
+  				<li class="social-button social-button-twitter"><a href="#">Твиттер</a></li>
+  				<li class="social-button social-button-instagram"><a href="#">Инстаграм</a></li>
+  				<li class="social-button social-button-facebook"><a href="#">Фейсбук</a></li>
+  				<li class="social-button social-button-vk"><a href="#">Вконтакте</a></li>
   			</ul>
   		</div>
 		
 		<div>
-	  		<ul>
-	  			<li><a href="#">Для поставщиков</a></li>
+	  		<ul class="footer-links">
+	  			<li class="first-link"><a href="#">Для поставщиков</a></li>
 	  			<li><a href="#">О производстве</a></li>
 	  			<li><a href="#">Наши документы</a></li>
 	  			<li><a href="#">Экологические стандарты</a></li>
 	  		</ul>
 	  	</div>
 
-	  	<p>
+	  	<p class="copyright">
 	  		<a href="https://htmlacademy.ru/intensive/htmlcss">
           <img src="img/html-academy.svg" width="108" height="39" alt="Логотип HTML Академии">
         </a>
-        Сделано в <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> © 2019
+        <p class="copyright-text">
+          Сделано в <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> © 2019
+        </p>
 	  	</p>
   	</footer>
 
-  	<section>
+  	<section class="feedback">
   		<h2 class="visually-hidden">Форма обратной связи</h2>
-  		<p>Мы обязательно вам ответим!</p>
+  		<p feedback-title>Мы обязательно вам ответим!</p>
   		<form action="#" method="post">
   			<p>
 	  			<label class="visually-hidden" for="feedback-name-field">Имя и фамилия</label>
-	  			<input type="text" name="feedback-name" id="feedback-name-field" placeholder="Имя Фамилия">
+	  			<input class="text-field" type="text" name="feedback-name" id="feedback-name-field" placeholder="Имя Фамилия">
 	  		</p>
 	  		<p>
 	  			<label class="visually-hidden" for="feedback-email-field">Адрес электронной почты</label>
-				<input type="email" name="feedback-email" id="feedback-email-field" placeholder="email@example.com" required>
+				<input class="email-field" type="email" name="feedback-email" id="feedback-email-field" placeholder="email@example.com" required>
 			</p>
 			<p>
 	  			<label class="visually-hidden" for="feedback-text-field">Текст обращения</label>

@@ -1,3 +1,5 @@
+/* Общие стили */
+
 body {
   margin: 0;
   padding: 0;
@@ -14,10 +16,6 @@ body {
   background-repeat: no-repeat;
 }
 
-/*
-Нам пока не объясняли как правильно задавать .visually-hidden, но уж очень мне хотелось побыстрее убрать эти элементы для удобства. 
-Взяла правило с a11yproject.com, по необходимости заменю.
-  */
 .visually-hidden { 
     position: absolute !important;
     height: 1px; 
@@ -30,6 +28,12 @@ body {
 
 a {
   text-decoration: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+}
+
+ul {
+  list-style: none;
 }
 
 .button {
@@ -38,106 +42,145 @@ a {
   font-weight: 700;
 
   border: none;
-  background-color: #ec593c;
-  /*
-  linear-gradient
-  box-shadow
-  */
+  box-shadow: 0px 1px 2px 0px #ac1000;
+  background-color: #e84d37;
+  background-image: -moz-linear-gradient( 90deg, rgb(231,74,53) 0%, rgb(242,104,67) 100%);
+  background-image: -webkit-linear-gradient( 90deg, rgb(231,74,53) 0%, rgb(242,104,67) 100%);
+  background-image: -ms-linear-gradient( 90deg, rgb(231,74,53) 0%, rgb(242,104,67) 100%);
 
-  color: #fefefe;
-}
-
-.main-navigation {
-  font-size: 16px;
-  line-height: 18px;
-  font-weight: 700;
   color: #ffffff;
 }
 
-.site-navigation,
-.user-navigation {
-  list-style: none;
+.button:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  background-blend-mode: overlay;
+}
+
+.button:active {
+  outline: none;
+  background-color: rgba(0, 0, 0, 0.07);
+  box-shadow: inset 0px 2px 2px 0px #942718;
+}
+
+/* Стили шапки */
+
+.index-logo-link {
+  border: none;
 }
 
 .site-navigation a {
-  border-bottom: 1px solid rgb(255, 255, 255, 0.2);
-  color: #ffffff;
+  line-height: 18px;
+  font-weight: 700;
 }
 
 .site-navigation a:hover {
   background-color: #f7f6f3;
+  border: 1px solid #ffffff;
   color: #323232;
 }
 
 .site-navigation a:active {
   background-color: #ededed;
-  color: #323232;
+  box-shadow: inset 0px 2px 1px 0px #696969;
+  border: none;
 }
 
-/*
-Возможно, придется менять верстку
-.submenu {
-
+.current-page a {
+  background-color: #d07058;
+  border: none;
 }
-
-.submenu option {
-	
-}
-*/
-
 
 .nav-button {
   font-size: 14px;
   line-height: 16px;
   font-weight: 500;
-
+  background-color: rgba(255, 255, 255, 0.2);
   border: none;
-  background-color: rgb(255, 255, 255, 0.2);
   color: #ffffff;
 }
 
-.nav-button:hover {
+.nav-button-search:hover,
+.nav-button-login:hover,
+.full-cart {
   background-color: #f8f7f4;
   color: #323232;
 }
 
+.contacts {
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 700;
+}
+
+.phone-number {
+  font-size: 22px;
+  line-height: 24px;
+}
+
+/* Скрытые окна шапки */
+
 .search,
 .login,
 .cart {
+  display: none;
+
   background-color: #f8f7f4;
-  /*
-  box-shadow
-  */
+  box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
 }
 
-.search-field,
-.email-field,
-.password-field,
-.search-field::placeholder,
-.email-field::placeholder,
-.password-field::placeholder {
-  font-size: 14px;
+.user-navigation input,
+.subscription input {
+  border: none;
+  box-shadow: inset 0px 0px 0px 1px rgba(178, 178, 178, 0.52);
+  
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 700;
+  color: #323232;
+}
+
+.user-navigation input::placeholder,
+.subscription input::placeholder {
+  font-size: 16px;
   line-height: 24px;
   font-weight: 400;
 
   color: #999999;
 }
 
+.user-navigation input:hover,
+.subscription input:hover {
+  box-shadow: inset 0px 0px 0px 2px rgba(178, 178, 178, 0.52);
+}
+
+.user-navigation input:focus,
+.subscription input:focus {
+  outline: none;
+  box-shadow: inset 0px 0px 0px 2px rgba(46, 136, 228, 0.52);
+} 
+
 .login-links a {
   font-size: 13px;
   line-height: 24px;
   font-weight: 400;
-
-  border-bottom: 1px solid rgb(0, 0, 0, 0.3);
-
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
   color: #323232;
 }
 
-.cart-item {
+.login-links a:hover,
+.login-links a:active {
+  border-bottom-color: rgb(232, 77, 55, 0.3);
+  color: #e84d37;
+}
+
+.cart-item img {
+  border-radius: 50%;
+}
+
+.cart-item p {
   font-size: 13px;
   line-height: 16px;
   font-weight: 400;
-
   color: #323232;
 }
 
@@ -149,49 +192,20 @@ a {
   font-size: 15px;
   line-height: 18px;
   font-weight: 700;
-
   color: #323232;
 }
 
-.timetable {
-  font-size: 14px;
-  line-height: 16px;
-  font-weight: 700;
-}
-
-.phone-number {
-  font-size: 22px;
-  line-height: 24px;
-  font-weight: 700;
-}
-
-.current-page a {
-  border-bottom: none;
-  background-color: #d07058;
-  /*
-  Нужно будет еще поработать над тенью
-  box-shadow: inset 0px 2px 1px 0px rgba(105, 105, 105, 0.004);
-  */
-  color: #ffffff;
-}
+/* Стилизация index.html */
 
 .features {
-  background-color: #eee2cd;
+  background-color: #f1e7d1;
   background-image: url("../img/features-background.jpg");
-  background-position: 0 0;
-  background-repeat: repeat;
-
   color: #323232;
 }
 
 .features-title {
   font-size: 24px;
   line-height: 30px;
-  font-weight: 500;
-}
-
-.features-list {
-  list-style: none;
 }
 
 .feature-item p {
@@ -201,11 +215,8 @@ a {
 }
 
 .article {
-  background-color: #ffffff;
   background-image: url("../img/article-background.jpg");
-  background-position: 0 0;
   background-repeat: no-repeat;
-
   color: #323232;
 }
 
@@ -216,38 +227,102 @@ a {
 }
 
 .article h3 {
-  text-decoration: underline;
-
   font-size: 24px;
   line-height: 30px;
   font-weight: 700;
+  text-decoration: underline;
+  text-decoration-color: #323232;
+}
+
+.subscription-wrapper {
+  background-image: url("../img/subscription-background.svg");
+  background-repeat: no-repeat;
 }
 
 .subscription {
   background-color: #f8f7f4;
+}
 
+.subscription p {
+  font-weight: 400;
   color: #5a5a5a;
 }
 
-/* Пока не знаю насколько правильно
-.subscription::after {
-  background-image: url("../img/subscription-background.svg");
-  background-position: 0 0;
-  background-repeat: no-repeat;
-}
-*/
+/* Стилизация catalog.html */
 
-.subscription p {
-  font-size: 16px;
-  line-height: 22px;
+h1 {
+  font-size: 35px;
+  line-height: 41px;
+  font-weight: 700;
+}
+
+.catalog-navigation a,
+.catalog-navigation li {
+  font-size: 14px;
+  line-height: 16px;
   font-weight: 400;
 }
 
-.subscription-field {
-  border: 1px solid #b2b2b2;
-  line-height: 24px;
+.catalog-navigation a:hover,
+.catalog-navigation a:active,
+.footer-links a:hover,
+.footer-links a:active,
+.copyright-text a:hover,
+.copyright-text a:active {
+  color: #ffbc9e;
+  border-bottom-color: rgba(255, 188, 158, 0.3);
 }
 
-.subscription-field {
-  line-height: 24px;
+.catalog-item:hover {
+  background-color: rgba(248, 247, 244, 0.2);
+  box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
+}
+
+.catalog-item img {
+  border-radius: 50%;
+}
+
+.catalog-item h3 {
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 500;
+  text-decoration: underline;
+  text-decoration-color: rgba(255, 255, 255, 0.2);
+}
+
+.catalog-item p {
+  font-size: 45px;
+  line-height: 45px;
+  font-weight: 700;
+  text-shadow: 0px 1px 3px rgba(49, 50, 53, 0.5);
+}
+
+.catalog-item span {
+  font-size: 30px;
+}
+
+/* Стилизация подвала */
+
+.social-button {
+  display: none;
+}
+
+.footer-links a {
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 400;
+}
+
+.first-link a {
+  font-weight: 700;
+}
+
+.copyright a {
+  border: none;
+}
+
+.copyright-text {
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 400;
 }
