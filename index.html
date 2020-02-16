@@ -9,55 +9,57 @@
   </head>
   <body>
   	<header>
-  		<nav class="main-navigation">
-  			<img class="index-logo" src="img/index-logo.svg" width="154" height="64" alt="Логотип магазина Глэйси">
-  			<ul class="site-navigation">
-  				<li><a href="#">Каталог</a>
-					<select class="submenu visually-hidden" name="submenu" id="submenu-select" multiple onchange="window.location.href=this.options[this.selectedIndex].value">
-						<option value="#">Новинки</option>
-						<option value="catalog.html">Сливочное</option>
-						<option value="#" selected>Щербеты</option>
-						<option value="#">Фруктовый лед</option>
-						<option value="#">Мелорин</option>
-					</select>
-  				</li>
-  				<li><a href="#">Доставка и оплата</a></li>
-  				<li><a href="#">О Компании</a></li>
-  			</ul>
-  			<ul class="user-navigation">
-  				<li>
-  					<form action="#" method="get">
-              <div class="search">
-    						<label class="visually-hidden" for="website-search-field">Поиск по сайту</label>
-  	  					<input class="search-field" type="search" name="website-search" id="website-search-field" placeholder="Крем-брюле">
-              </div>
-	  					<button class="nav-button nav-button-search" type="button">Поиск</button>
-  					</form>
-  				</li>
-  				<li>
-  					<button class="nav-button nav-button-login" type="button">Вход</button>
-  					<section class="login">
-  						<h2 class="visually-hidden">Вход в аккаунт</h2>
-  						<form action="#" method="post">
-  							<p>
-	  							<label class="visually-hidden" for="login-email-field">Электронная почта</label>
-								  <input class="email-field" type="email" name="login-email" id="login-email-field" placeholder="Электронная почта" required>
-							  </p>
-							  <p>
-								  <label class="visually-hidden" for="login-password-field">Пароль</label>
-								  <input class="password-field" type="password" name="login-password" id="login-password-field" placeholder="Пароль" required>
-							  </p>
-							  <button class="button" type="submit">Войти</button>
-							  <ul class="login-links">
-								  <li><a href="#">Забыли пароль?</a></li>
-								  <li><a href="#">Новая регистрация</a></li>
-							  </ul>
-  						</form>
-  					</section>
-  				</li>
-  				<li><button class="nav-button" type="button">Пусто</button></li>
-  			</ul>
-		</nav>
+      <div class="main-navigation-wrapper">
+    		<nav class="main-navigation">
+    			<img class="index-logo" src="img/index-logo.svg" width="154" height="64" alt="Логотип магазина Глэйси">
+    			<ul class="site-navigation">
+    				<li><a href="#">Каталог</a>
+  					<select class="submenu visually-hidden" name="submenu" id="submenu-select" multiple onchange="window.location.href=this.options[this.selectedIndex].value">
+  						<option value="#">Новинки</option>
+  						<option value="catalog.html">Сливочное</option>
+  						<option value="#" selected>Щербеты</option>
+  						<option value="#">Фруктовый лед</option>
+  						<option value="#">Мелорин</option>
+  					</select>
+    				</li>
+    				<li><a href="#">Доставка и оплата</a></li>
+    				<li><a href="#">О Компании</a></li>
+    			</ul>
+    			<ul class="user-navigation">
+    				<li>
+    					<form action="#" method="get">
+                <div class="search">
+      						<label class="visually-hidden" for="website-search-field">Поиск по сайту</label>
+    	  					<input class="search-field" type="search" name="website-search" id="website-search-field" placeholder="Крем-брюле">
+                </div>
+  	  					<button class="nav-button nav-button-search" type="button">Поиск</button>
+    					</form>
+    				</li>
+    				<li>
+    					<button class="nav-button nav-button-login" type="button">Вход</button>
+    					<section class="login">
+    						<h2 class="visually-hidden">Вход в аккаунт</h2>
+    						<form action="#" method="post">
+    							<p>
+  	  							<label class="visually-hidden" for="login-email-field">Электронная почта</label>
+  								  <input class="email-field" type="email" name="login-email" id="login-email-field" placeholder="Электронная почта" required>
+  							  </p>
+  							  <p>
+  								  <label class="visually-hidden" for="login-password-field">Пароль</label>
+  								  <input class="password-field" type="password" name="login-password" id="login-password-field" placeholder="Пароль" required>
+  							  </p>
+  							  <button class="button" type="submit">Войти</button>
+  							  <ul class="login-links">
+  								  <li><a href="#">Забыли пароль?</a></li>
+  								  <li><a href="#">Новая регистрация</a></li>
+  							  </ul>
+    						</form>
+    					</section>
+    				</li>
+    				<li><button class="nav-button" type="button">Пусто</button></li>
+    			</ul>
+  		</nav>
+    </div>
 
     <p class="timetable">С 10 до 20, ежедневно</p>
     <p class="phone-number">8 812 450-25-25</p>
@@ -152,24 +154,26 @@
   			</ul>
   		</section>
 
-  		<article class="article">
-  			<h2>Новое в нашем блоге</h2>
-  			<h3>10 способов сервировки фруктовых щербетов к столу</h3>
-  		</article>
+      <div class="container">
+    		<article class="article">
+    			<h2>Новое в нашем блоге</h2>
+    			<h3>10 способов сервировки фруктовых щербетов к столу</h3>
+    		</article>
 
-  		<div class="subscription-wrapper">
-        <div class="subscription">
-    			<h2 class="visually-hidden">Подписка на рассылку</h2>
-    			<p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
-    			<form action="#" method="post">
-  	  			<label class="visually-hidden" for="subscription-email-field">Адрес электронной почты для подписки на рассылку</label>
-  	  			<input class="subscription-field" type="email" name="subscription-email" id="subscription-email-field" placeholder="email@example.com" required>
-  	  			<button class="button" type="submit">Отправить</button>
-  	  		</form>
-    		</div>
+    		<div class="subscription-wrapper">
+          <div class="subscription">
+      			<h2 class="visually-hidden">Подписка на рассылку</h2>
+      			<p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
+      			<form action="#" method="post">
+    	  			<label class="visually-hidden" for="subscription-email-field">Адрес электронной почты для подписки на рассылку</label>
+    	  			<input class="subscription-field" type="email" name="subscription-email" id="subscription-email-field" placeholder="email@example.com" required>
+    	  			<button class="button" type="submit">Отправить</button>
+    	  		</form>
+      		</div>
+        </div>
       </div>
 
-      <div>
+      <div class="map">
         <img src="img/map.jpg" width="1200" height="430" alt="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург">
 
         <section class="contacts">
@@ -185,7 +189,7 @@
         </section>
       </div>
   	</main>
-  	<footer>
+  	<footer class="footer">
   		<div>
   			<ul class="footer-social">
   				<li class="social-button social-button-twitter"><a href="#">Твиттер</a></li>
