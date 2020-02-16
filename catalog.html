@@ -11,9 +11,11 @@
   	<header>
   		<div class="main-navigation-wrapper">
 	  		<nav class="main-navigation">
-				<a class="index-logo-link" href="index.html">
-					<img class="index-logo" src="img/index-logo.svg" width="154" height="64" alt="Логотип магазина Глэйси">
-				</a>
+	  			<div class="index-logo-wrapper">
+					<a class="index-logo-link" href="index.html">
+						<img class="index-logo" src="img/index-logo.svg" width="154" height="64" alt="Логотип магазина Глэйси">
+					</a>
+				</div>
 				<ul class="site-navigation">
 					<li class="current-page"><a href="#">Каталог</a>
 						<select class="submenu visually-hidden" name="submenu" id="submenu-select" multiple onchange="window.location.href=this.options[this.selectedIndex].value">
@@ -87,19 +89,19 @@
 			</nav>
 		</div>
 		
-		<div class="contacts"></div>
-			<p class="timetable">С 10 до 20, ежедневно</p>
-	    	<p class="phone-number">8 812 450-25-25</p>
-	    </p>
+		<div class="contacts-wrapper container">
+	      <p class="timetable">С 10 до 20, ежедневно</p>
+	      <p class="phone-number">8 812 450-25-25</p>
+	    </div>
   	</header>
   	<main>
-  		<h1>Сливочное мороженое</h1>
-
   		<ul class="catalog-navigation">
   			<li><a href="index.html">Главная</a><span>&raquo;</span></li>
   			<li><a href="catalog.html">Каталог</a><span>&raquo;</span></li>
   			<li>Сливочное</li>
   		</ul>
+
+		<h1>Сливочное мороженое</h1>
 
   		<section class="filters">
   			<h2 class="visually-hidden">Фильтры сливочного мороженого</h2>
@@ -254,7 +256,7 @@
 			<li><button class="visually-hidden" type="button">></button></li>
 		</ol>
   	</main>
-  	<footer class="footer">
+  	<footer class="footer container">
   		<div>
   			<ul class="footer-social">
   				<li class="social-button social-button-twitter"><a href="#">Твиттер</a></li>
@@ -267,20 +269,20 @@
 		<div>
 	  		<ul class="footer-links">
 	  			<li class="first-link"><a href="#">Для поставщиков</a></li>
-	  			<li><a href="#">О производстве</a></li>
 	  			<li><a href="#">Наши документы</a></li>
+	  			<li><a href="#">О производстве</a></li>
 	  			<li><a href="#">Экологические стандарты</a></li>
 	  		</ul>
 	  	</div>
 
-	  	<p class="copyright">
+	  	<div class="copyright">
 	  		<a href="https://htmlacademy.ru/intensive/htmlcss">
             	<img src="img/html-academy.svg" width="108" height="39" alt="Логотип HTML Академии">
             </a>
         	<p class="copyright-text">
           		Сделано в <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> © 2019
         	</p>
-	  	</p>
+	  	</div>
   	</footer>
   </body>
 </html>

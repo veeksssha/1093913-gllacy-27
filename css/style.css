@@ -28,6 +28,11 @@ body {
     clip: rect(0 0 0 0);
 }
 
+.container {
+  width: 1220px;
+  margin: auto;
+}
+
 a {
   text-decoration: none;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
@@ -89,6 +94,7 @@ fieldset {
 
 .site-navigation {
   margin-right: auto;
+  width: 700px;
 }
 
 .site-navigation li {
@@ -235,6 +241,11 @@ fieldset {
   color: #323232;
 }
 
+.contacts-wrapper p {
+  margin: 0;
+  text-align: right;
+}
+
 /* Стилизация index.html */
 
 .slider h2 {
@@ -296,6 +307,7 @@ fieldset {
 .features {
   width: 1220px;
   margin: auto;
+  margin-bottom: 40px;
 
   background-color: #f1e7d1;
   background-image: url("../img/features-background.jpg");
@@ -313,7 +325,7 @@ fieldset {
 }
 
 .feature-item {
-  width: 50%;
+  width: 565px;
 }
 
 .feature-item p {
@@ -322,18 +334,19 @@ fieldset {
   font-weight: 400;
 }
 
-.container {
+.flex-wrapper {
   display: flex;
   justify-content: space-between;
-  width: 1220px;
-  margin: auto;
 }
 
 .article {
-  width: 50%;
+  width: 595px;
+  margin-bottom: 40px;
 
   background-image: url("../img/article-background.jpg");
   background-repeat: no-repeat;
+  background-position: right;
+  background-color: #ffffff;
   color: #323232;
 }
 
@@ -352,9 +365,11 @@ fieldset {
 }
 
 .subscription-wrapper {
-  width: 50%;
+  width: 595px;
+  margin-bottom: 40px;
 
   background-image: url("../img/subscription-background.svg");
+  background-size: cover;
   background-repeat: no-repeat;
 }
 
@@ -402,6 +417,15 @@ h1 {
   font-size: 35px;
   line-height: 41px;
   font-weight: 700;
+}
+
+.catalog-navigation {
+  display: flex;
+}
+
+.catalog-navigation a,
+.catalog-navigation span {
+  margin-right: 10px;
 }
 
 .catalog-navigation a,
@@ -530,6 +554,18 @@ h1 {
 .footer {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 330px;
+}
+
+.footer-links li:nth-child(odd) {
+  margin-right: 30px;
 }
 
 .footer-links a {
@@ -540,6 +576,10 @@ h1 {
 
 .first-link a {
   font-weight: 700;
+}
+
+.copyright p {
+  margin: 0;
 }
 
 .copyright a {
