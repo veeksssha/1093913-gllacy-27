@@ -256,6 +256,9 @@ fieldset {
 /* Controls и изменение цвета фона позже, нужны псевдоэлементы и еще что-то, чего я пока не знаю */
 
 .slide-1 {
+  /* Временно */
+  min-height: 600px;
+
   background-image: url(../img/ice-cream-1.png);
   background-position: top center;
   background-repeat: no-repeat;
@@ -281,6 +284,7 @@ fieldset {
 
 .raspberry-block,
 .chocolate-block {
+  width: 595px;
   background-repeat: no-repeat;
 }
 
@@ -401,6 +405,11 @@ fieldset {
   font-weight: 700;
 }
 
+.map img {
+  width: 100%;
+  height: auto;
+}
+
 .feedback {
   background-color: #f8f7f4;
 }
@@ -445,6 +454,19 @@ h1 {
   border-bottom-color: rgba(255, 188, 158, 0.3);
 }
 
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.filter {
+  width: 240px;
+
+  margin-right: 15px;
+  margin-bottom: 30px;
+}
+
 .filter legend {
   font-size: 14px;
   line-height: 16px;
@@ -463,9 +485,22 @@ h1 {
   background-color: rgba(255, 255, 255, 0.2);
 }
 
+.filter-fat {
+  width: 450px;
+}
+
+.filter-filling {
+  width: 750px;
+}
+
 /* Продолжить работу над фильтрами после псевдоэлементов */
 
 .filter-button {
+  /* Фильтров может быть много,
+  но кнопка всегда должна быть последней */
+  order: 100;
+
+  align-self: center;
   border: none;
   background-color: rgba(251, 252, 251, 0.2);
   box-shadow: inset 0px 0px 0px 2px #ffffff;
@@ -485,13 +520,15 @@ h1 {
   box-shadow: inset 0px 2px 1px 0px #696969;
 }
 
-.catalog-items {
+.catalog-items,
+.hit-items {
   display: flex;
   flex-wrap: wrap;
   width: 1220px;
 }
 
-.catalog-item {
+.catalog-item,
+.hit-item {
   width: 270px;
   flex-grow: 1;
 }
@@ -531,7 +568,14 @@ h1 {
 
 /* Стрелки влево и вправо позже, нужны псевдоэлементы */
 
+.catalog-pages {
+  display: flex;
+  justify-content: flex-end;
+}
+
 .catalog-pages a {
+  margin-right: 20px;
+
   border: none;
   line-height: 18px;
 }
@@ -561,11 +605,19 @@ h1 {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  width: 330px;
+  width: 380px;
+}
+
+.footer-links li {
+  width: 170px;
 }
 
 .footer-links li:nth-child(odd) {
-  margin-right: 30px;
+  margin-right: 25px;
+}
+
+.footer-links li:nth-child(even) {
+  margin-right: auto;
 }
 
 .footer-links a {
