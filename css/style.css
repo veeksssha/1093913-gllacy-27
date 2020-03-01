@@ -11,7 +11,6 @@ body {
   color: #ffffff;
 
   background-color: #849d8f;
-  background-image: url("../img/index-background-1.png");
   background-position: top center;
   background-repeat: no-repeat;
 }
@@ -244,28 +243,22 @@ fieldset {
   fill: #000000;
 }
 
-.contacts-wrapper {
+.timephone-wrapper {
   margin-top: -10px;
 }
 
-.contacts-wrapper p {
+.timephone-wrapper p {
   margin: 0;
   text-align: right;
 }
 
-.contacts-wrapper .timetable {
+.timephone-wrapper .timetable {
   font-size: 15px;
 }
 
-.contacts-wrapper .phone-number {
+.timephone-wrapper .phone-number {
   font-size: 24px;
   line-height: 24px;
-}
-
-.contacts {
-  font-size: 14px;
-  line-height: 16px;
-  font-weight: 700;
 }
 
 .phone-number {
@@ -555,57 +548,115 @@ fieldset {
 
 /* Стилизация index.html */
 
-.slider h2 {
+.site-wrapper {
+  background-image: url("../img/ice-cream-1.png");
+  background-repeat: no-repeat;
+  background-position: top center;
+  transition: background-image 0.5s ease, background-color 0.5s ease;
+}
+
+.site-wrapper::before,
+.site-wrapper::after {
+  content: "";
+
+  visibility: hidden;
+}
+
+.site-wrapper::before {
+  background-image: url("../img/ice-cream-2.png");
+}
+
+.site-wrapper::after {
+  background-image: url("../img/ice-cream-3.png");
+}
+
+.slider {
+  position: relative;
+  
+  padding-top: 320px;
+  
+  text-align: center;
+  color: #ffffff;
+}
+
+.slide {
+  display: none;
+}
+
+.slider-title {
+  width: 700px;
+  margin: 0 auto;
+  margin-bottom: 27px;
   font-size: 60px;
-  line-height: 60.35px;
+  line-height: 60px;
 }
 
-/* Controls и изменение цвета фона позже, нужны псевдоэлементы и еще что-то, чего я пока не знаю */
-
-.slide-1 {
-  /* Временно */
-  min-height: 600px;
-
-  background-image: url(../img/ice-cream-1.png);
-  background-position: top center;
-  background-repeat: no-repeat;
+.slide-button {
+  padding: 12px 44px;
+  font-size: 31px;
+  line-height: 41px;
+  text-align: center;
 }
 
-.slide-2 {
-  background-image: url(../img/ice-cream-2.png);
-  background-position: top center;
-  background-repeat: no-repeat;
+.slider-controls {
+  position: absolute;
+  bottom: 63px;
+  left: 0;
+  z-index: 20;
+  
+  font-size: 0;
 }
 
-.slide-3 {
-  background-image: url(../img/ice-cream-3.png);
-  background-position: top center;
-  background-repeat: no-repeat;
+.slider-controls label {
+  display: inline-block;
+  width: 17px;
+  height: 17px;
+  margin-right: 8px;
+
+  vertical-align: top;
+
+  background-color: transparent;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  cursor: pointer;
 }
 
-.big-button {
-  font-size: 32px;
-  line-height: 44px;
-  text-shadow: 0px 2px 5px rgba(160, 32, 11, 0.76);
+#product-1:checked ~ .site-wrapper {
+  background-color: #849d8f;
+  background-image: url("../img/ice-cream-1.png");
+}
+
+#product-2:checked ~ .site-wrapper {
+  background-color: #8996a6;
+  background-image: url("../img/ice-cream-2.png");
+}
+
+#product-3:checked ~ .site-wrapper {
+  background-color: #9d8b84;
+  background-image: url("../img/ice-cream-3.png");
+}
+
+#product-1:checked ~ .slider-wrapper #slide-1,
+#product-2:checked ~ .slider-wrapper #slide-2,
+#product-3:checked ~ .slider-wrapper #slide-3 {
+  display: block;
+}
+
+/* Не работает */
+#product-1:checked ~ .slider-wrapper label[for="product-1"],
+#product-2:checked ~ .slider-wrapper label[for="product-2"],
+#product-3:checked ~ .slider-wrapper label[for="product-3"] {
+  background-color: #ffffff;
 }
 
 .raspberry-block,
 .chocolate-block {
   width: 595px;
+  padding: 22px;
+  box-sizing: border-box;
   background-repeat: no-repeat;
+  border-radius: 15px 15px 15px 15px;
 }
-
-.raspberry-block h2,
-.chocolate-block h2 {
-  font-size: 35px;
-  line-height: 41px;
-}
-
-.raspberry-block p,
-.chocolate-block p {
-  font-size: 18px;
-}
-
 .raspberry-block {
   background-image: url(../img/raspberry-background.jpg);
 }
@@ -614,6 +665,23 @@ fieldset {
   background-image: url(../img/chocolate-background.jpg);
 }
 
+.raspberry-block h2,
+.chocolate-block h2 {
+  margin: 0;
+  font-size: 35px;
+  line-height: 41px;
+}
+
+.raspberry-block p,
+.chocolate-block p {
+  margin-bottom: 50px;
+  font-size: 18px;
+}
+
+.raspberry-block .button,
+.chocolate-block .button {
+  float: right;
+}
 
 .features {
   box-sizing: border-box;
@@ -686,6 +754,22 @@ fieldset {
 .flex-wrapper {
   display: flex;
   justify-content: space-between;
+}
+
+.hit-item {
+  position: relative;
+}
+
+.hit-item::after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 10px;
+
+  width: 62px;
+  height: 62px;
+
+  background: url("../img/hit.svg") no-repeat 0 0;
 }
 
 .article {
@@ -761,21 +845,53 @@ fieldset {
 }
 
 .contacts {
+  position: absolute;
+  top: 65px;
+  right: 32px;
+
+  box-sizing: border-box;
+  width: 320px;
+  padding: 7px 27px;
+
   background-color: #fefefe;
+  border-radius: 15px 15px 15px 15px;
   color: #323232;
 }
 
 .contacts h3,
 .contacts span {
+  margin: 0;
+  margin-bottom: 7px;
   font-size: 14px;
   line-height: 20px;
   font-weight: 400;
 }
 
+.contacts h3 {
+  margin-top: 22px;
+}
+
 .contacts p {
+  margin: 0;
+  
   font-size: 18px;
   line-height: 24px;
   font-weight: 700;
+}
+
+.contacts span {
+  display: block;
+  margin-bottom: 25px;
+}
+
+.contacts .button {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+
+.map {
+  position: relative;
 }
 
 .map img {
@@ -784,13 +900,76 @@ fieldset {
 }
 
 .feedback {
+  display: none;
+
+  position: fixed;
+  top: 100px;
+  right: 380px;
+
+  box-sizing: border-box;
+  width: 510px;
+  padding: 25px;
+
   background-color: #f8f7f4;
+  border-radius: 15px 15px 15px 15px;
+
+  z-index: 3;
+}
+
+.close-feedback {
+  position: absolute;
+  right: 20px;
+
+  width: 17px;
+  height: 17px;
+
+  border: none;
+  background: url(../img/cross-big.svg) no-repeat 0 0;
 }
 
 .feedback-title {
+  margin: 0;
   font-size: 24px;
   line-height: 28px;
   color: #323232;
+}
+
+.feedback input {
+  width: 250px;
+}
+
+.feedback textarea {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.feedback .button {
+  float: right;
+}
+
+/* Стилизация попапа */
+
+#feedback-popup:after {
+  position: fixed;
+  content: "";
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(0,0,0,0.5);
+  z-index: -2;
+}
+
+#feedback-popup:before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: #FFF;
+  border-radius: 15px 15px 15px 15px;
+  z-index: -1;
 }
 
 /* Стилизация catalog.html */
