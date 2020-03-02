@@ -124,7 +124,7 @@ fieldset {
   border: none;
 }
 
-.site-navigation > li > a > span {
+.site-navigation > li:not(.current-page) > a > span {
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
@@ -141,10 +141,13 @@ fieldset {
   border: none;
 }
 
-.current-page a {
+.current-page > a {
   border-radius: 30px 30px 30px 30px;
   background-color: #d07058;
-  border: none;
+}
+
+.current-page > span {
+  border-bottom: none;
 }
 
 .user-navigation li {
@@ -268,12 +271,14 @@ fieldset {
 
 /* Скрытые окна шапки */
 
-.catalog:hover + .submenu {
-  display: block;
+.catalog:hover .submenu {
+  visibility: visible;
+  transition: all 0.3s;
 }
 
 .submenu {
-  display: none;
+  visibility: hidden;
+  transition: all 0.3s;
   position: absolute;
   top: 35px;
   left: -5px;
@@ -288,6 +293,8 @@ fieldset {
   background-color: #f8f7f4;
   border-radius: 5px 5px 5px 5px;
   box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
+
+  z-index: 3;
 }
 
 .submenu a {
@@ -337,8 +344,10 @@ fieldset {
 }
 
 
-.nav-button-search:hover + .search {
-  display: block;
+.nav-button-search:hover + .search,
+.search:hover {
+  visibility: visible;
+  transition: all 0.3s;
 }
 
 .search,
@@ -349,7 +358,8 @@ fieldset {
 }
 
 .search {
-  display: none;
+  visibility: hidden;
+  transition: all 0.3s;
 
   position: absolute;
   top: 65px;
@@ -357,6 +367,8 @@ fieldset {
 
   background-color: #f8f7f4;
   border-radius: 5px 5px 5px 5px;
+
+  z-index: 3;
 }
 
 .search-field {
@@ -364,12 +376,15 @@ fieldset {
   width: 340px;
 }
 
-.nav-button-login:hover + .login {
-  display: block;
+.nav-button-login:hover + .login,
+.login:hover {
+  visibility: visible;
+  transition: all 0.3s;
 }
 
 .login {
-  display: none;
+  visibility: hidden;
+  transition: all 0.3s;
 
   position: absolute;
   top: 65px;
@@ -378,6 +393,8 @@ fieldset {
   padding: 8px 17px;
 
   border-radius: 5px 5px 5px 5px;
+
+  z-index: 3;
 }
 
 .login input {
@@ -448,12 +465,15 @@ fieldset {
   color: #e84d37;
 }
 
-.nav-button-full-cart:hover + .cart {
-  display: block;
+.nav-button-full-cart:hover + .cart,
+.cart:hover {
+  visibility: visible;
+  transition: all 0.3s;
 }
 
 .cart {
-  display: none;
+  visibility: hidden;
+  transition: all 0.3s;
 
   position: absolute;
   top: 65px;
@@ -462,6 +482,8 @@ fieldset {
   padding: 8px 14px;
 
   border-radius: 5px 5px 5px 5px;
+
+  z-index: 3;
 }
 
 .cart-items {
@@ -685,7 +707,6 @@ fieldset {
 
 .features {
   box-sizing: border-box;
-  width: 1220px;
   margin: auto;
   margin-bottom: 40px;
   padding: 28px 20px;
@@ -1083,7 +1104,6 @@ h1 {
 .hit-item {
   position: relative;
   width: 270px;
-  min-height: 405px;
   flex-grow: 1;
 }
 
@@ -1122,7 +1142,7 @@ h1 {
 .hit-item p {
   position: absolute;
   left: 10px;
-  bottom: 90px;
+  bottom: 50px;
 
   font-size: 45px;
   line-height: 45px;
@@ -1140,8 +1160,12 @@ h1 {
 .catalog-item .button,
 .hit-item .button {
   display: none;
+  position: absolute;
+  left: 40px;
 
   margin: 0 auto;
+
+  z-index: 2;
 }
 
 /* Стрелки влево и вправо позже, нужны псевдоэлементы */
@@ -1151,22 +1175,47 @@ h1 {
   justify-content: flex-end;
 }
 
+.button-pagination {
+  width: 8px;
+  height: 14px;
+
+  margin-top: 7px;
+
+  background: url("../img/icon-right-small.svg") no-repeat 0 0;
+  border: none;
+}
+
+.catalog-pages li:first-child {
+  margin-right: 17px;
+  transform: scale(-1, 1);
+}
+
 .catalog-pages a {
-  margin-right: 20px;
+  position: relative;
+
+  display: inline-block;
+
+  width: 26px;
+  height: 26px;
+
+  box-sizing: border-box;
+  margin-right: 17px;
+  padding-top: 4px;
+
+  line-height: 18px;
+  text-align: center;
 
   border: none;
-  line-height: 18px;
+  border-radius: 50%;
 }
 
 .catalog-pages a:hover {
   background-color: rgba(255, 255, 255, 0.2);
-  border-radius: 50%;
 }
 
 .catalog-current-page a,
 .catalog-current-page a:hover {
-  background-color: #ffffff;
-  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 1);
   color: #323232;
 }
 
