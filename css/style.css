@@ -1322,6 +1322,10 @@ h1 {
   flex-grow: 1;
 }
 
+.elements-wrapper {
+  z-index: 3;
+}
+
 .catalog-item img,
 .hit-item img {
   box-sizing: border-box;
@@ -1351,11 +1355,6 @@ h1 {
   line-height: 45px;
   font-weight: 700;
   text-shadow: 0px 1px 3px rgba(49, 50, 53, 0.5);
-}
-
-.catalog-item a,
-.hit-item a {
-  z-index: 3;
 }
 
 .catalog-item span,
