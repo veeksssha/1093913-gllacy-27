@@ -611,12 +611,13 @@ fieldset {
 .slider-title {
   width: 700px;
   margin: 0 auto;
-  margin-bottom: 27px;
+  margin-bottom: 36px;
   font-size: 60px;
   line-height: 60px;
 }
 
 .slide-button {
+  margin-bottom: 36px;
   padding: 12px 44px;
   font-size: 31px;
   line-height: 41px;
@@ -679,6 +680,7 @@ fieldset {
 .chocolate-block {
   width: 595px;
   padding: 22px;
+  margin-bottom: 18px;
   box-sizing: border-box;
   background-repeat: no-repeat;
   border-radius: 15px 15px 15px 15px;
@@ -1320,10 +1322,11 @@ h1 {
   position: relative;
   width: 270px;
   flex-grow: 1;
+  z-index: 4;
 }
 
 .elements-wrapper {
-  z-index: 3;
+  z-index: 1;
 }
 
 .catalog-item img,
@@ -1332,7 +1335,6 @@ h1 {
   display: block;
   margin: 5px auto;
   border-radius: 50%;
-  z-index: 1;
 }
 
 .catalog-item h3,
@@ -1343,6 +1345,11 @@ h1 {
   font-size: 16px;
   line-height: 22px;
   font-weight: 500;
+}
+
+.catalog-item a,
+.hit-item a {
+  z-index: 1000;
 }
 
 .catalog-item p,
@@ -1370,6 +1377,7 @@ h1 {
   bottom: 20px;
 
   margin: 0 auto;
+  z-index: 1000;
 }
 
 .item-wrapper {
@@ -1383,7 +1391,11 @@ h1 {
 
   background-color: rgba(248, 247, 244, 0.2);
   box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
-  z-index: 2;
+}
+
+.catalog-item:hover,
+.hit-item:hover {
+  z-index: 6;
 }
 
 .catalog-item:hover .item-wrapper,
