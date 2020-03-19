@@ -14,7 +14,7 @@
     <input class="visually-hidden" type="radio" name="slider" id="product-3">
 
     <div class="site-wrapper">
-    	<header>
+    	<header class="container">
         <div class="main-navigation-wrapper">
       		<nav class="main-navigation">
             <div class="index-logo-wrapper">
@@ -35,7 +35,7 @@
       			</ul>
       			<ul class="user-navigation">
       				<li>
-      					<form action="#" method="get">
+      					<form action="https://echo.htmlacademy.ru/" method="get">
       						<button class="nav-button nav-button-search" type="button">
   	  	  						<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="17" height="17" viewBox="0 0 17 17"><path fill="#fff" d="M16.958 15.527L11.75 10.32A6.455 6.455 0 0 0 13 6.5 6.5 6.5 0 1 0 6.5 13a6.465 6.465 0 0 0 3.839-1.263l5.205 5.204 1.414-1.414zM6.5 11C4.019 11 2 8.981 2 6.5S4.019 2 6.5 2 11 4.019 11 6.5 8.981 11 6.5 11z"/></svg>
   								<span class="visually-hidden">Поиск</span>
@@ -53,7 +53,7 @@
   						</button>
       					<section class="login">
       						<h2 class="visually-hidden">Вход в аккаунт</h2>
-      						<form action="#" method="post">
+      						<form action="https://echo.htmlacademy.ru/" method="post">
       							<p>
     	  							<label class="visually-hidden" for="login-email-field">Электронная почта</label>
     								  <input class="email-field" type="email" name="login-email" id="login-email-field" placeholder="Электронная почта" required>
@@ -76,7 +76,7 @@
       			</ul>
     		</nav>
       </div>
-      <div class="timephone-wrapper container">
+      <div class="timephone-wrapper">
         <p class="timetable">С 10 до 20, ежедневно</p>
         <p class="phone-number">8 812 450-25-25</p>
       </div>
@@ -177,7 +177,7 @@
             <div class="subscription">
         			<h2 class="visually-hidden">Подписка на рассылку</h2>
         			<p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
-        			<form action="#" method="post">
+        			<form action="https://echo.htmlacademy.ru/" method="post">
       	  			<label class="visually-hidden" for="subscription-email-field">Адрес электронной почты для подписки на рассылку</label>
       	  			<input class="subscription-field" type="email" name="subscription-email" id="subscription-email-field" placeholder="email@example.com" required>
       	  			<button class="button" type="submit">Отправить</button>
@@ -198,7 +198,7 @@
             <p>8 812 450-25-25</p>
             <span>(с 10 до 20 ежедневно)</span>
 
-            <button class="button" type="button" onclick="show('feedback-popup')">Форма обратной связи</button>
+            <a class="button" onclick="show('feedback-popup')">Форма обратной связи</a>
           </section>
         </div>
     	</main>
@@ -235,7 +235,7 @@
     		<h2 class="visually-hidden">Форма обратной связи</h2>
         <button class="close-feedback" type="button" onclick="hide('feedback-popup')"><span class="visually-hidden">Закрыть</span></button>
     		<p class="feedback-title">Мы обязательно вам ответим!</p>
-    		<form action="#" method="post">
+    		<form action="https://echo.htmlacademy.ru/" method="post">
     			<p>
   	  			<label class="visually-hidden" for="feedback-name-field">Имя и фамилия</label>
   	  			<input class="text-field" type="text" name="feedback-name" id="feedback-name-field" placeholder="Имя Фамилия">
@@ -252,17 +252,6 @@
   	  	</form>
     	</section>
     </div>
-    <script>
-      $ = function(id) {
-        return document.getElementById(id);
-      }
-
-      var show = function(id) {
-        $(id).style.display ='block';
-      }
-      var hide = function(id) {
-        $(id).style.display ='none';
-      }
-    </script>
+    <script src="js/script.js"></script>
   </body>
 </html>
